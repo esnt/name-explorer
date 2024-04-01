@@ -23,6 +23,15 @@ n_years = df['year'].nunique()
 unique_names = set(df['name'])
 st.title('Name Explorer')
 
+st.markdown("""
+The purpose of this app is to help answer the question “How does name popularity change over time?”  The user is able to enter a name to explore in the search below.  Regular expressions can also be used in the search to check for alternative spellings.  For example, the regular expression “All?[iy]son”  will include names “Alison”, “Allison”, “Allyson”, or “Alyson”.  (Obviously there is some user knowledge required in order to know what alternative spellings are of interest.). Other features of the app include: 
+* Aggregated or separate plotting lines (when multiple names are returned in a regular expression)
+* Plotting by proportion (within a year and sex) or raw count
+* Local or global y-axis scaling
+* Name facts and counts
+* Separate tabs for males and females 
+""")
+
 pattern = st.text_input('Enter a name to search', 'John')
 regex = st.checkbox('Check if your name search is a regular expression')
 
