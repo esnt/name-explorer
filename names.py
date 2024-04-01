@@ -22,7 +22,7 @@ n_years = df['year'].nunique()
 
 unique_names = set(df['name'])
 st.title('Name Explorer')
-st.header('Description')
+st.subheader('Description')
 st.markdown("""
 The purpose of this app is to help answer the question “How does name popularity change over time?” where popularity can be inferred by the number or proportion the name occurs. The main outcome of the app is a plot of the frequency or proportion of the name over time.  
 
@@ -36,7 +36,7 @@ Other features of the app include:
 * Separate tabs for males and females 
 """)
 st.divider()
-
+st.subheader('Name Search and Graphs')
 pattern = st.text_input('Enter a name to search', 'John')
 regex = st.checkbox('Check if your name search is a regular expression')
 
